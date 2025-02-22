@@ -360,8 +360,8 @@ if __name__ == '__main__':
     D = Discriminator().to(device)
     mylogger = getLogger(f"{G.__class__.__name__}", log_dir=args.log_dir)
 
-    ir_dataset = imgDataset(path="./Train_ir")
-    vi_dataset = imgDataset(path="./Train_vi")
+    ir_dataset = imgDataset(path="./Train_ir/Train_ir")
+    vi_dataset = imgDataset(path="./Train_vi/Train_vi")
 
     ir_dataloader = DataLoader(ir_dataset, batch_size=args.batch_size, shuffle=True)
     vi_dataloader = DataLoader(vi_dataset, batch_size=args.batch_size, shuffle=True)
